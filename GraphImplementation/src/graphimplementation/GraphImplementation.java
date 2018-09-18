@@ -18,4 +18,9 @@ public class GraphImplementation {
         // TODO code application logic here
     }
     
+    public void addVertex()
+    {
+        
+    }
+    
 }
