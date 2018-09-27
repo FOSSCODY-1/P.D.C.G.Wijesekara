@@ -47,24 +47,36 @@ public class GraphImplementation {
             System.out.print(s+" ");
             
             //Get all adjacent vertices of the dequeued vertex s
-            //
+            //mark the visited vertices and enqueue to the queue
+            Iterator<Integer> i=graph[s].listIterator();
+            while(i.hasNext())
+            {
+                int n=i.next();
+                if(!visited[n])
+                {
+                    visited[n]=true;
+                    queue.add(n);
+                }
+            }
         }
-        
-        
-        
-        
-        
     }  
     
     
-    
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
-    public void addVertex()
+    //Main function
+    public static void main(String[] args) 
     {
+        GraphImplementation g = new GraphImplementation(4);
+        
+        g.addEdge(0, 1);
+        g.addEdge(0, 2);
+        g.addEdge(1, 2);
+        g.addEdge(2, 0);
+        g.addEdge(2, 3);
+        g.addEdge(3, 3);
+        
+        System.out.println("Following is Breadth First Traversal "+"(starting from vertex 2)");
+                           
+        g.BFS(2);
         
     }
-    
 }
