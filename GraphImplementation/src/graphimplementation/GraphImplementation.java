@@ -7,7 +7,7 @@ package graphimplementation;
 
 /**
  *
- * @author Harshana
+ * @author chethani
  */
 public class GraphImplementation {
 
@@ -17,10 +17,4 @@ public class GraphImplementation {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
-    public void addVertex()
-    {
-        
-    }
-    
 }
