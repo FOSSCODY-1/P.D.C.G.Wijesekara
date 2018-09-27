@@ -5,13 +5,15 @@ import java.io.*;
 import java.util.*;
 
 //This class represent a directed graph using adjacency list representation
-public class GraphImplementation {
+public class GraphImplementation 
+{
 
     private int V; //Number of vertices
     private LinkedList<Integer> graph[]; //array list for adjacency list
     
     //constructor
-    public GraphImplementation(int v) {
+    public GraphImplementation(int v) 
+    {
         V=v;
         graph=new LinkedList[v];
         for(int i=0; i<v; ++i)
@@ -22,7 +24,8 @@ public class GraphImplementation {
     }
     
     //Adding an edge into the graph
-    void addEdge(int tail, int head ){
+    void addEdge(int tail, int head )
+    {
         graph[tail].add(head); // add head to tail's list
     }
     
