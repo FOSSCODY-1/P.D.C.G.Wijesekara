@@ -4,16 +4,15 @@ package graphimplementation;
 import java.io.*;
 import java.util.*;
 
-
-
 //This class represent a directed graph using adjacency list representation
-public class GraphImplementation {
-
+public class GraphImplementation 
+{
     private int V; //Number of vertices
     private LinkedList<Integer> graph[]; //array list for adjacency list
     
     //constructor
-    public GraphImplementation(int v) {
+    public GraphImplementation(int v) 
+    {
         V=v;
         graph=new LinkedList[v];
         for(int i=0; i<v; ++i)
@@ -24,7 +23,8 @@ public class GraphImplementation {
     }
     
     //Adding an edge into the graph
-    void addEdge(int tail, int head ){
+    void addEdge(int tail, int head )
+    {
         graph[tail].add(head); // add head to tail's list
     }
     
@@ -93,6 +93,26 @@ public class GraphImplementation {
         DFSUtil(v, visited);
     }
     
+    //Function to print the adjacency list representation of graph
+    static void displayGraph(GraphImplementation graphE)
+    {
+        System.out.println("\nDisplay the graph");
+        //System.out.println("\n");
+        for(int v=0; v< graphE.V; v++)
+        {
+            System.out.println("Adjacency list of vertex "+v);
+            System.out.println("head");
+            for(Integer pCrawl:graphE.graph[v])
+            {
+                System.out.println(" -> " +pCrawl);
+            }
+            System.out.println("\n");
+        }
+    }
+            
+            
+            
+        
     
     
     
@@ -114,6 +134,7 @@ public class GraphImplementation {
         System.out.println("Following is Depth First Traversal "+"(starting from vertex 2)");
         g.DFS(2);                   
         
-        
+        //Print the graph
+        displayGraph(g);
     }
 }
