@@ -91,6 +91,23 @@ public class GraphImplementation {
         DFSUtil(v, visited);
     }
     
+    //Function to print the adjacency list representation of graph
+    static void displayGraph(GraphImplementation graphE)
+    {
+        System.out.println("\nDisplay the graph");
+        //System.out.println("\n");
+        for(int v=0; v< graphE.V; v++)
+        {
+            System.out.println("Adjacency list of vertex "+v);
+            System.out.println("head");
+            for(Integer pCrawl:graphE.graph[v])
+            {
+                System.out.println(" -> " +pCrawl);
+            }
+            System.out.println("\n");
+        }
+    }
+    
     //Main function
     public static void main(String[] args) 
     {
@@ -107,7 +124,10 @@ public class GraphImplementation {
         g.BFS(2);    
         
         System.out.println("Following is Depth First Traversal "+"(starting from vertex 2)");
-        g.DFS(2);                   
+        g.DFS(2);  
+        
+        //Print the graph
+        displayGraph(g);
         
         
     }
