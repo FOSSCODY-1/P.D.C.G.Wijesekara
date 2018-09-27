@@ -4,8 +4,6 @@ package graphimplementation;
 import java.io.*;
 import java.util.*;
 
-
-
 //This class represent a directed graph using adjacency list representation
 public class GraphImplementation {
 
@@ -92,9 +90,6 @@ public class GraphImplementation {
         //recursive call DFSUtil for every vertex
         DFSUtil(v, visited);
     }
-    
-    
-    
     
     //Main function
     public static void main(String[] args) 
