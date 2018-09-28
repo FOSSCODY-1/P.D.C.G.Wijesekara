@@ -113,7 +113,12 @@ public class GraphImplementation
     //Main function
     public static void main(String[] args) 
     {
-        GraphImplementation g = new GraphImplementation(4);
+        //Scanner t = new Scanner(System.in);
+        
+//        //Get number of vertices as user input
+//        System.out.println("Insert Number of Vertices : ");
+//        int x= t.nextInt();
+        GraphImplementation g = new GraphImplementation(x);
         
         g.addEdge(0, 1);
         g.addEdge(0, 2);
@@ -121,6 +126,14 @@ public class GraphImplementation
         g.addEdge(2, 0);
         g.addEdge(2, 3);
         g.addEdge(3, 3);
+        
+//        int tail, head, i=1;
+//        while()
+        
+//        while(i!=0)
+//        {
+//            
+//        }
         
          
         System.out.println("Following is Breadth First Traversal "+"(starting from vertex 2)");
