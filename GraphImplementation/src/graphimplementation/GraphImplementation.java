@@ -118,7 +118,7 @@ public class GraphImplementation
 //        //Get number of vertices as user input
 //        System.out.println("Insert Number of Vertices : ");
 //        int x= t.nextInt();
-        GraphImplementation g = new GraphImplementation(x);
+        GraphImplementation g = new GraphImplementation(4);
         
         g.addEdge(0, 1);
         g.addEdge(0, 2);
