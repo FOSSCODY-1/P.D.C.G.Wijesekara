@@ -7,7 +7,6 @@ import java.util.*;
 //This class represent a directed graph using adjacency list representation
 public class GraphImplementation 
 {
-
     private int V; //Number of vertices
     private LinkedList<Integer> graph[]; //array list for adjacency list
     
@@ -123,15 +122,16 @@ public class GraphImplementation
         g.addEdge(2, 3);
         g.addEdge(3, 3);
         
+         
         System.out.println("Following is Breadth First Traversal "+"(starting from vertex 2)");
+        //Call the BFS function
         g.BFS(2);    
         
         System.out.println("Following is Depth First Traversal "+"(starting from vertex 2)");
-        g.DFS(2);  
+        //Call the DFS function
+        g.DFS(2);                   
         
         //Print the graph
         displayGraph(g);
-        
-        
     }
 }
