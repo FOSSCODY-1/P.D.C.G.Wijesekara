@@ -1,21 +1,44 @@
 # P.D.C.G.Wijesekara
+### Project Title
 Graph implementation
 
-Description
+### Description
 
-Implementation of simple graph with the functions BFS and DFS. 
-This JAVA implementation uses adjacency list representation of graphs
+\> Implementation of simple directed graph using java programming language.\
+\> This JAVA implementation uses adjacency list representation of graphs.\
+\> Basic functionalities of a directed graph implemented :  
+  * Insertion of vertex and an edge.  
+  * Deletion of a vertex and an edge.  
+  * Breadth First Search traversal.  
+  * Deapth First Search traversal.  
+  * Display the graph
+  
+### Set up and Installation
 
-Installation
+\>  Download the GraphImplementation folder as a zip file.<br/>
+\>  Extract it and compile the GraphImplementation.java file.<br/>
+\>  Run the executable file using any java platform.<br/>
 
-This graph implementation can be installed and run in any java platform.
-Here I have used Netbeans as my development platform.
+### Instructions to use
 
-contributing
+\> Insert the number of vertices as user input. (A linked list array will be created starting form the index 0 up to the number of vertices minus one.<br/>
+\> Insert edges using option 1.
+  * input : 1 3<br/>
+  This will add vertex 3 to vertex 1's list, representing an edge between 1-->3<br/>
+\> After Implementing the Graph required functions can be called.<br/>
 
-This project can be extended to develop the applications of DFS and BFS.
-For example, 
--Finding Strongle Connected Components(DFS)
--Topological sorting(DFS)
--Bipartite graph(Both BFS and DFS)
--Broadcasting in networks(BFS)
+### Support 
+
+This program will support for any Java platform.
+
+### Built on
+* Netbeans IDE 8.0.2
+
+### Tested on
+* Windows 10
+
+### Licence
+* This project is licensed under the MIT License - see  the [LICENSE.md](LICENSE.md) file for details
+
+
+  
