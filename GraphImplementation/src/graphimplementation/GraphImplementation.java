@@ -23,13 +23,13 @@ public class GraphImplementation
     }
     
     //Adding an edge into the graph
-    void addEdge(int tail, int head )
+    public void addEdge(int tail, int head )
     {
         graph[tail].add(head); // add head to tail's list
     }
     
     //Breadth First Traversal from a given vertex s
-    void BFS(int s)
+    public void BFS(int s)
     {
         //Mark the current node as visited and enqueue it
         //By default set as false
@@ -66,7 +66,7 @@ public class GraphImplementation
     //Deapth First Search traversal
     
     //recursive util function used in DFS traversal
-    void DFSUtil(int v, boolean visited[])
+   public void DFSUtil(int v, boolean visited[])
     {
         //Mark the current node as visited and print it
         visited[v]=true;
@@ -84,7 +84,7 @@ public class GraphImplementation
     }
     
     //The DFS traversal Function. Uses DFSUtil() recursively
-    void DFS(int v)
+    public void DFS(int v)
     {
         //Mark all the vertices as visited, false by default
         boolean visited[]=new boolean[V];
@@ -94,7 +94,7 @@ public class GraphImplementation
     }
     
     //Function to print the adjacency list representation of graph
-    static void displayGraph(GraphImplementation graphE)
+    public void displayGraph(GraphImplementation graphE)
     {
         System.out.println("\nDisplay the graph");
         //System.out.println("\n");
@@ -113,38 +113,84 @@ public class GraphImplementation
     //Main function
     public static void main(String[] args) 
     {
-        //Scanner t = new Scanner(System.in);
+        Scanner t = new Scanner(System.in);
         
-//        //Get number of vertices as user input
-//        System.out.println("Insert Number of Vertices : ");
-//        int x= t.nextInt();
-        GraphImplementation g = new GraphImplementation(4);
+        //Get number of vertices as user input
+        System.out.println("Insert Number of Vertices : ");
+        int x= t.nextInt();
         
-        g.addEdge(0, 1);
-        g.addEdge(0, 2);
-        g.addEdge(1, 2);
-        g.addEdge(2, 0);
-        g.addEdge(2, 3);
-        g.addEdge(3, 3);
         
-//        int tail, head, i=1;
-//        while()
+        GraphImplementation g = new GraphImplementation(x); //creating an instance of class named as g
         
-//        while(i!=0)
-//        {
-//            
-//        }
+        int tail, head, i=1;
         
-         
-        System.out.println("Following is Breadth First Traversal "+"(starting from vertex 2)");
-        //Call the BFS function
-        g.BFS(2);    
+        while(i!=0)
+        {
+            System.out.println("Enter 1 to insert an edge.");
+            System.out.println("Enter 2 to get the BFS.");
+            System.out.println("Enter 3 to get the DFS.");
+            System.out.println("Enter 4 to Display the graph");
+            System.out.println("Enter 0 to exit.");
+            
+            i=t.nextInt();
         
-        System.out.println("Following is Depth First Traversal "+"(starting from vertex 2)");
-        //Call the DFS function
-        g.DFS(2);                   
+            switch(i)
+            {
+                case 1:
+                    System.out.println("Insert tail of the edge : ");
+                    tail=t.nextInt();
+                    System.out.println("Insert head of the edge : ");
+                    head=t.nextInt();
+                    g.addEdge(tail, head);
+                    break;
+
+                case 2:
+                    System.out.println("Enter the starting vertex : ");
+
+                    System.out.println("\nFollowing is Breadth First Traversal "+"(starting from vertex 2)");
+                    //Call the BFS function
+                    g.BFS(2);
+                    break;
+
+                case 3:
+                    System.out.println("\nFollowing is Depth First Traversal "+"(starting from vertex 2)");
+                    //Call the DFS function
+                    g.DFS(2);
+                    break;
+
+                case 4:
+                    //Print the graph
+                    g.displayGraph(g);
+                    break;
+
+                case 0:
+                    System.exit(0);
+                    break;
+
+                default :
+                    System.out.println("\nEnter a valid option.");
+            }
+            
+        }
         
-        //Print the graph
-        displayGraph(g);
+           
+//        GraphImplementation g = new GraphImplementation(5);
+//        
+//        g.addEdge(0, 1);
+//        g.addEdge(0, 2);
+//        g.addEdge(1, 2);
+//        g.addEdge(2, 0);
+//        g.addEdge(2, 3);
+//        g.addEdge(3, 3);
+//        System.out.println("\nFollowing is Breadth First Traversal "+"(starting from vertex 2)");
+//        //Call the BFS function
+//        g.BFS(2);    
+//        
+//        System.out.println("\nFollowing is Depth First Traversal "+"(starting from vertex 2)");
+//        //Call the DFS function
+//        g.DFS(2);                   
+//        
+//        //Print the graph
+//        g.displayGraph(g);
     }
 }
