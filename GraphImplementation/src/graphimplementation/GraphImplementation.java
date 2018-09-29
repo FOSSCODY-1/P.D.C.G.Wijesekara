@@ -119,7 +119,6 @@ public class GraphImplementation
         System.out.println("Insert Number of Vertices : ");
         int x= t.nextInt();
         
-        
         GraphImplementation g = new GraphImplementation(x); //creating an instance of class named as g
         
         int tail, head, i=1;
@@ -173,7 +172,7 @@ public class GraphImplementation
             
         }
         
-           
+//        HARD CODE  
 //        GraphImplementation g = new GraphImplementation(5);
 //        
 //        g.addEdge(0, 1);
